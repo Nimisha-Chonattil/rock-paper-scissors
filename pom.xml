@@ -19,6 +19,8 @@
 	</dependencies>
 	
 	<properties>
+	    <sonar.organization>nimisha-chonattil</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
    		<docker.image.prefix>rps</docker.image.prefix>
 	</properties>
 	<build>
