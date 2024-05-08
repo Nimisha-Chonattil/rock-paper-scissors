@@ -1,6 +1,6 @@
 name: CI Process
 on:
-  workflow_Dispatch:
+  workflow_dispatch:
 
 jobs:
   Build:
@@ -34,7 +34,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Nimisha-Chonattil_rock-paper-scissors -Dsonar.qualitygate.wait=true
       - name: Uploading artifact
-        uses: actions/upoad-artifact@v3
+        uses: actions/upoad-artifact@v4
         with:
-          name:rockpaper-artifact
+          name: rockpaper-artifact
           path: target/*jar
